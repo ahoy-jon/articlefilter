@@ -22,6 +22,8 @@
 		<!-- Dependencies -->
 		<androidannotations.version>2.7</androidannotations.version>
 		<android.version>4.1.1.4</android.version>
+        <twitter4j.version>3.0.3</twitter4j.version>
+        <lombok.version>0.11.6</lombok.version>
 	</properties>
 
 	<dependencies>
@@ -41,6 +43,16 @@
 			<groupId>com.googlecode.androidannotations</groupId>
 			<artifactId>androidannotations-api</artifactId>
 			<version>${androidannotations.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.twitter4j</groupId>
+			<artifactId>twitter4j</artifactId>
+			<version>${twitter4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
 		</dependency>
 	</dependencies>
 
