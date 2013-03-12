@@ -5,28 +5,36 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
 >
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.articlefilter.app</groupId>
-	<artifactId>ArticleFilter</artifactId>
+	<groupId>fr.ceedela.alice</groupId>
+	<artifactId>alice</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>apk</packaging>
-	<name>ArticleFilter</name>
+	<name>alice</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
 		<!-- Plugins -->
 		<android-maven-plugin.version>3.5.0</android-maven-plugin.version>
 		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
-		<api.platform>15</api.platform>
-
+		<api.platform>16</api.platform>
 		<!-- Dependencies -->
 		<androidannotations.version>2.7</androidannotations.version>
+		<actionBarSherlock.version>4.2.0</actionBarSherlock.version>
 		<android.version>4.1.1.4</android.version>
-        <twitter4j.version>3.0.3</twitter4j.version>
+		<twitter4j.version>3.0.3</twitter4j.version>
         <lombok.version>0.11.6</lombok.version>
 	</properties>
-
 	<dependencies>
+		<dependency>
+			<groupId>org.twitter4j</groupId>
+			<artifactId>twitter4j-core</artifactId>
+			<version>${twitter4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>android</artifactId>
@@ -45,14 +53,17 @@
 			<version>${androidannotations.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.twitter4j</groupId>
-			<artifactId>twitter4j-core</artifactId>
-			<version>${twitter4j.version}</version>
+			<groupId>com.actionbarsherlock</groupId>
+			<artifactId>actionbarsherlock</artifactId>
+			<version>${actionBarSherlock.version}</version>
+			<type>apklib</type>
 		</dependency>
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
+			<groupId>com.actionbarsherlock</groupId>
+			<artifactId>actionbarsherlock</artifactId>
+			<version>${actionBarSherlock.version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -67,6 +78,10 @@
 					<sdk>
 						<platform>${api.platform}</platform>
 					</sdk>
+					<!-- Proguard is not skipped by default -->
+					<proguard>
+						<skip>true</skip>
+					</proguard>
 				</configuration>
 			</plugin>
 			<plugin>
