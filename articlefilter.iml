@@ -58,7 +58,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.codemodel:codemodel:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.twitter4j:twitter4j:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:0.11.6" level="project" />
-    <orderEntry type="jdk" jdkName="Android 4.2.2 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android 4.0.3 Platform" jdkType="Android SDK" />
   </component>
 </module>
 
