@@ -1,7 +1,8 @@
 gen-external-apklibs
 .DS_Store
-gen
-out
-target
+Alice/gen
+Alice/out
+Alice/target
+Alice/bin
 .idea
 *~
