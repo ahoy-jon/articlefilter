@@ -1,5 +1,8 @@
 package fr.cedeela.alice;
 
+import twitter4j.Twitter;
+import twitter4j.TwitterFactory;
+
 import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.ViewById;
@@ -20,7 +23,7 @@ public class AddTwitterAccount extends Activity {
     @Click
     void myButton() {
          String name = myInput.getText().toString();
+         Twitter twitter = TwitterFactory.getSingleton();
     	 textView.setText("Hello "+name);
-    	 
     }
 }
