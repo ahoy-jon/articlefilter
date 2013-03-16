@@ -21,5 +21,6 @@ public class AddTwitterAccount extends Activity {
     void myButton() {
          String name = myInput.getText().toString();
     	 textView.setText("Hello "+name);
+    	 
     }
 }
