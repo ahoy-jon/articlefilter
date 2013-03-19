@@ -4,5 +4,7 @@
     <string name="app_name">Alice</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="user_token">user_token</string>
+    <string name="user_token_secret">user_token_secret</string>
 
 </resources>

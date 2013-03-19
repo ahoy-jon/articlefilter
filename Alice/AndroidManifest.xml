@@ -16,14 +16,20 @@
         <activity
             android:name="fr.cedeela.alice.BrowseArticles"
             android:label="@string/app_name" >
+           	<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+           	</intent-filter>
         </activity>
         <activity android:name="fr.cedeela.alice.AddTwitterAccount_">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <data android:scheme="alice" android:host="callback"/>
             </intent-filter>
         </activity>
     </application>
+    
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    
 
 </manifest>
